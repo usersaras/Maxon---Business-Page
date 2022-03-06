@@ -81,6 +81,10 @@ button{
     padding-top: 145px;
 }
 
+.mt-50{
+    margin-top: 50px;
+}
+
 .text-center{
     text-align: center;
 }
@@ -124,6 +128,8 @@ p.text-grey{
     bottom: $b; 
     left: $l;
 }
+
+
 
 .flex-box{
     @include flexbox(row, center, space-between, 30px);
@@ -306,7 +312,7 @@ p.text-grey{
                     transition: 0.3s;
                     
                     &:hover{
-                        filter: drop-shadow(0px 0px 5px purple);
+                        filter: drop-shadow(0px 0px 2px rgb(248, 97, 248));
                         transition: 0.3s;
                     }
 
@@ -361,4 +367,90 @@ p.text-grey{
                 }
             }
         }//end of fourth sec
+
+        #fifth-sec{
+            background: #162b45;
+            .fifth-sec-container{
+                width: 80%;
+                margin: 0 auto;
+                color: #fff;
+                display: grid;
+                grid-template-columns: repeat(4, auto);
+                gap: 20px;
+                .fsc{
+                    img{
+                        height: 60px;
+                    }
+                    .fsc-text{
+                        margin-top: 15px;
+                        @include flexbox(row, center, none, 10px);
+                        font-weight: $medium;
+                        .fsc-number{
+                            p{
+                            font-size: 6rem;
+                            margin: 0;
+                            padding: 0;
+                            }
+                        }
+
+                        .fsc-side-text{
+                            p{
+                            font-size: 2.2rem;
+                            text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            }
+        } //end of section fifth-sec
+
+        #sixth-sec{
+            .sixth-sec-container{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+               
+                    
+                .owl-carousel{
+                    margin-right: 10%;
+                    .item{
+                        img{
+                            width: 20%;
+                            border-radius: 50%;
+                        }
+                        p{
+                            &:nth-child(2){
+                                margin-top: 20px;
+                        
+                            }
+
+                            &:nth-child(3){
+                                margin-top: 20px;
+                                font-weight: bold;
+                                font-size: 1.8rem;
+                            }
+                            &:nth-child(4){
+                                font-weight: $light;
+                                font-size: 1.4rem;
+                                color: grey;
+                            }
+                        }
+                    }
+                    .owl-dots{
+                        margin-top: 20px;
+                        .owl-dot{
+                            background: $darkblue;
+                            height: 12px;
+                            width: 12px;
+                            margin-right: 5px;
+                        }
+
+                        .active{
+                            background: $orange;
+                        }
+                    }
+                }
+                
+            }
+        }
     }//end of body
